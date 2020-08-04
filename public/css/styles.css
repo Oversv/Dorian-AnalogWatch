@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box; }
+
+body {
+  background-color: skyblue;
+  margin: 0; }
+
+h1 {
+  color: red;
+  margin: 0; }
+
+.watch {
+  height: 600px;
+  width: 600px;
+  background-color: white;
+  border-radius: 50%;
+  border: 25px solid black;
+  position: relative; }
+  .watch__hour {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 50px; }
+  .watch__minutes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2.5em;
+    color: red; }
+
+.container-hour--1 {
+  transform: rotate(30deg); }
+
+.hour-1 {
+  transform: rotate(-30deg); }
+
+.container-hour--2 {
+  transform: rotate(60deg); }
+
+.hour-2 {
+  transform: rotate(-60deg); }
+
+.container-hour--3 {
+  transform: rotate(90deg); }
+
+.hour-3 {
+  transform: rotate(-90deg); }
+
+.container-hour--4 {
+  transform: rotate(120deg); }
+
+.hour-4 {
+  transform: rotate(-120deg); }
+
+.container-hour--5 {
+  transform: rotate(150deg); }
+
+.hour-5 {
+  transform: rotate(-150deg); }
+
+.container-hour--6 {
+  transform: rotate(180deg); }
+
+.hour-6 {
+  transform: rotate(-180deg); }
+
+.container-hour--7 {
+  transform: rotate(210deg); }
+
+.hour-7 {
+  transform: rotate(-210deg); }
+
+.container-hour--8 {
+  transform: rotate(240deg); }
+
+.hour-8 {
+  transform: rotate(-240deg); }
+
+.container-hour--9 {
+  transform: rotate(270deg); }
+
+.hour-9 {
+  transform: rotate(-270deg); }
+
+.container-hour--10 {
+  transform: rotate(300deg); }
+
+.hour-10 {
+  transform: rotate(-300deg); }
+
+.container-hour--11 {
+  transform: rotate(330deg); }
+
+.hour-11 {
+  transform: rotate(-330deg); }
+
+.container-hour--12 {
+  transform: rotate(360deg); }
+
+.hour-12 {
+  transform: rotate(-360deg); }
+
+.minutes-0 {
+  transform: rotate(0deg); }
+
+.minutes-1 {
+  transform: rotate(6deg); }
+
+.minutes-2 {
+  transform: rotate(12deg); }
+
+.minutes-3 {
+  transform: rotate(18deg); }
+
+.minutes-4 {
+  transform: rotate(24deg); }
+
+.minutes-5 {
+  transform: rotate(30deg); }
+
+.minutes-6 {
+  transform: rotate(36deg); }
+
+.minutes-7 {
+  transform: rotate(42deg); }
+
+.minutes-8 {
+  transform: rotate(48deg); }
+
+.minutes-9 {
+  transform: rotate(54deg); }
+
+.minutes-10 {
+  transform: rotate(60deg); }
+
+.minutes-11 {
+  transform: rotate(66deg); }
+
+.minutes-12 {
+  transform: rotate(72deg); }
+
+.minutes-13 {
+  transform: rotate(78deg); }
+
+.minutes-14 {
+  transform: rotate(84deg); }
+
+.minutes-15 {
+  transform: rotate(90deg); }
+
+.minutes-16 {
+  transform: rotate(96deg); }
+
+.minutes-17 {
+  transform: rotate(102deg); }
+
+.minutes-18 {
+  transform: rotate(108deg); }
+
+.minutes-19 {
+  transform: rotate(114deg); }
+
+.minutes-20 {
+  transform: rotate(120deg); }
+
+.minutes-21 {
+  transform: rotate(126deg); }
+
+.minutes-22 {
+  transform: rotate(132deg); }
+
+.minutes-23 {
+  transform: rotate(138deg); }
+
+.minutes-24 {
+  transform: rotate(144deg); }
+
+.minutes-25 {
+  transform: rotate(150deg); }
+
+.minutes-26 {
+  transform: rotate(156deg); }
+
+.minutes-27 {
+  transform: rotate(162deg); }
+
+.minutes-28 {
+  transform: rotate(168deg); }
+
+.minutes-29 {
+  transform: rotate(174deg); }
+
+.minutes-30 {
+  transform: rotate(180deg); }
+
+.minutes-31 {
+  transform: rotate(186deg); }
+
+.minutes-32 {
+  transform: rotate(192deg); }
+
+.minutes-33 {
+  transform: rotate(198deg); }
+
+.minutes-34 {
+  transform: rotate(204deg); }
+
+.minutes-35 {
+  transform: rotate(210deg); }
+
+.minutes-36 {
+  transform: rotate(216deg); }
+
+.minutes-37 {
+  transform: rotate(222deg); }
+
+.minutes-38 {
+  transform: rotate(228deg); }
+
+.minutes-39 {
+  transform: rotate(234deg); }
+
+.minutes-40 {
+  transform: rotate(240deg); }
+
+.minutes-41 {
+  transform: rotate(246deg); }
+
+.minutes-42 {
+  transform: rotate(252deg); }
+
+.minutes-43 {
+  transform: rotate(258deg); }
+
+.minutes-44 {
+  transform: rotate(264deg); }
+
+.minutes-45 {
+  transform: rotate(270deg); }
+
+.minutes-46 {
+  transform: rotate(276deg); }
+
+.minutes-47 {
+  transform: rotate(282deg); }
+
+.minutes-48 {
+  transform: rotate(288deg); }
+
+.minutes-49 {
+  transform: rotate(294deg); }
+
+.minutes-50 {
+  transform: rotate(300deg); }
+
+.minutes-51 {
+  transform: rotate(306deg); }
+
+.minutes-52 {
+  transform: rotate(312deg); }
+
+.minutes-53 {
+  transform: rotate(318deg); }
+
+.minutes-54 {
+  transform: rotate(324deg); }
+
+.minutes-55 {
+  transform: rotate(330deg); }
+
+.minutes-56 {
+  transform: rotate(336deg); }
+
+.minutes-57 {
+  transform: rotate(342deg); }
+
+.minutes-58 {
+  transform: rotate(348deg); }
+
+.minutes-59 {
+  transform: rotate(354deg); }
+
+.minutes-60 {
+  transform: rotate(360deg); }
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 50%; }
+
+.hand__hour {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 12px;
+  height: 30%;
+  background-color: green;
+  z-index: 100;
+  transform: rotate(0deg);
+  transform-origin: bottom right;
+  transition: transform 1s; }
+
+.hand__minutes {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 8px;
+  height: 35%;
+  background-color: blue;
+  z-index: 1000;
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+  transition: transform 1s; }
+
+.hand__seconds {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  width: 4px;
+  height: 40%;
+  background-color: red;
+  z-index: 10000;
+  transform: rotate(180deg);
+  transform-origin: bottom right;
+  transition: transform 1s; }
