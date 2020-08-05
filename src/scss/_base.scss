@@ -6,16 +6,15 @@
 }
 
 body{
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color:skyblue;
-
     margin: 0;
-    
-    
- 
     
 }
 h1{
-    color: red;
-    margin: 0;
+    color: $base;
+    margin: 10px;
 }

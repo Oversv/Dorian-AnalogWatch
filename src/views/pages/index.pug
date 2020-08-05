@@ -6,7 +6,7 @@ html(lang="en")
     link(rel="stylesheet", href="css/styles.css")
     title Analog Watch
   body
-    //h1 Analog Watch
+    h1 Analog Watch
     #watch.watch
       <!-- Hours -->
       -let hour = 1;
@@ -17,14 +17,19 @@ html(lang="en")
           div(class=hourNumber)=hour++
       
       <!-- Minutes -->
-      -let min = 0;
-      while min < 60
-        -let minutes=`watch__minutes minutes-${min++}`
-        div(class=minutes)
-          div |
-
-      <!-- handles -->
-      #hand.hand
-      div#handHour.hand__hour
+      -let min = 1;
+      while min <= 60
+        -let minutes=`watch__minutes minutes-${min}`
+        if min % 5 === 0
+          div(class=`${minutes} quarter`)
+            div |
+        else          
+          div(class=minutes)
+            div ı
+        -min++   
+      <!-- hands -->
+      #hand.hand-base
+      div#handHour.hand-hour
       div#handMinutes.hand__minutes
-      div#handSeconds.hand__seconds    
+      div#handSeconds.hand__seconds
+      script(src="js/script.js")

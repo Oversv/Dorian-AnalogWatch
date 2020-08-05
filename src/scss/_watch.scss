@@ -1,14 +1,21 @@
 .watch{
-    height: 600px;
-    width: 600px;
-    background-color: white;
+    height: 300px;
+    width: 300px;
+    background-color: $base;
     border-radius: 50%;
-    border: 25px solid black;
+    border: 12px solid black;
+    margin: 0px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
+    overflow: hidden;
 
-
-    
-
+    @media (min-width: 600px){
+        height: 600px;
+        width: 600px;
+        border: 25px solid black;
+    }
 
     &__hour{
         position: absolute;       
@@ -17,8 +24,13 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        font-size: 2.5em;
-        padding-top: 50px;           
+        font-size: 1.2em;
+        padding-top: 23px;
+        
+        @media (min-width: 600px){
+            font-size: 2.5em;
+            padding-top: 45px;
+        }
     }
     &__minutes{
         position: absolute;
@@ -27,9 +39,18 @@
         width: 100%;
         height: 100%;
         text-align: center;
-        font-size: 2.5em;
-        color: red;
+        font-size: 1.2em;
+        color: $color1;
+
+        @media (min-width: 600px){
+            font-size: 2.5em;
+        }
     }
+}
+
+.quarter{
+    color: $color2;
+    font-weight: bolder;
 }
 
 @for $i  from 1 through 12{
@@ -37,72 +58,98 @@
         transform: rotate(#{$i * 30}deg);
     }
     .hour-#{$i}{
-        transform: rotate(#{-($i * 30)}deg);
+        transform: rotate(#{-($i * 30)}deg);        
+        color: $color1
     }
 }
 
-@for $i  from 0 through 60{
+@for $i  from 1 through 60{
     .minutes-#{$i}{
         transform: rotate(#{$i * 6}deg);
     }
 }
 
-.hand{
+.hand-base{
+  
+   width: 25px;
+   height: 25px;    
+   background-color: $color2;
+   border-radius: 50%;   
+   z-index: 1000000;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: black;
-    transform: translate(-50%, -50%); 
-    z-index: 10; 
-    border-radius: 50%;
+   @media (min-width: 600px){
+    width: 40px;
+    height: 40px;    
+    }
    
- 
 }
 
-.hand__hour{
+.hand-hour{
     position: absolute;
-    bottom: 50%;
-    left: 50%;
-    width: 12px;
-    height: 30%;    
-    background-color: green;
-    z-index: 100;
-   
-    //transform: translate(-50%) rotate(60deg);
-    transform: rotate(0deg);
-    transform-origin: bottom right;
-    transition: transform 1s;    
+    width:.4em;
+    height:5em;
+    bottom:50%; 
+    left:50%;
+    margin:0 0 -1em -.2em;
+    background-color: $color1;   
+    z-index: 1000; 
+    transform-origin:.2em 4em;
+    border-radius: 6px; 
     
+    @media (min-width: 600px){
+        width:.8em;
+        height:10em;
+        margin:0 0 -1.5em -.4em;
+        transform-origin:.4em 8.5em; 
+    }
+    
+    
+    &::before{
+        content: ''; 
+ 
+    }
     
 }
 .hand__minutes{
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    width: 8px;
-    height: 35%;
-    background-color: blue;    
-    z-index: 1000; 
-    //transform: translate(-50%) rotate(90deg);
-    transform: rotate(90deg);
-    transform-origin: bottom right;
-    transition: transform 1s;          
+    position:absolute;
+    width:.3em;
+    height:6em;
+    bottom:50%; 
+    left:50%;
+    margin:0 0 -1em -.15em;    
+    transform-origin:.15em 5em;
+    background-color: $color1;
+    
+    z-index: 1000;
+
+    @media (min-width: 600px){
+        width:.6em;
+        height:12.5em;
+        margin:0 0 -1.5em -.3em;  
+        transform-origin:.3em 11em;
+    }
+    
+    
    
 }
 .hand__seconds{
-    position: absolute;
-    bottom: 50%;
-    left: 50%;
-    width: 4px;
-    height: 40%;
-    background-color: red;
-    
-    z-index: 10000; //TODO: Revisar los z-index
-    //transform: translate(-50%) rotate(180deg);
-    transform: rotate(180deg);
-    transform-origin: bottom right;
-    transition: transform 1s;    
+    position:absolute;
+    width: .2em;
+    height: 7em; 
+    bottom:50%; 
+    left:50%;
+    margin:0 0 -1em -.1em;  //-margin-buttom=dif entre 12-14  // margin-left la mitad del width   
+    transform-origin: .1em 6em; //1em es la mitad del with y 12 es entre el 88% y 85% del height
+   
+   
+    background-color: red;    
+    z-index: 10000; 
+
+    @media (min-width: 600px){
+       
+        height: 14em; 
+        margin:0 0 -2em -.1em; 
+        transform-origin: .1em 12em;
+    }
+          
 }

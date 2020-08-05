@@ -5,20 +5,34 @@
   box-sizing: border-box; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: skyblue;
   margin: 0; }
 
 h1 {
-  color: red;
-  margin: 0; }
+  color: #303841;
+  margin: 10px; }
 
 .watch {
-  height: 600px;
-  width: 600px;
-  background-color: white;
+  height: 300px;
+  width: 300px;
+  background-color: #303841;
   border-radius: 50%;
-  border: 25px solid black;
-  position: relative; }
+  border: 12px solid black;
+  margin: 0px auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden; }
+  @media (min-width: 600px) {
+    .watch {
+      height: 600px;
+      width: 600px;
+      border: 25px solid black; } }
   .watch__hour {
     position: absolute;
     top: 0;
@@ -26,8 +40,12 @@ h1 {
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 2.5em;
-    padding-top: 50px; }
+    font-size: 1.2em;
+    padding-top: 23px; }
+    @media (min-width: 600px) {
+      .watch__hour {
+        font-size: 2.5em;
+        padding-top: 45px; } }
   .watch__minutes {
     position: absolute;
     top: 0;
@@ -35,83 +53,99 @@ h1 {
     width: 100%;
     height: 100%;
     text-align: center;
-    font-size: 2.5em;
-    color: red; }
+    font-size: 1.2em;
+    color: #eeeeee; }
+    @media (min-width: 600px) {
+      .watch__minutes {
+        font-size: 2.5em; } }
+
+.quarter {
+  color: #fdcb9e;
+  font-weight: bolder; }
 
 .container-hour--1 {
   transform: rotate(30deg); }
 
 .hour-1 {
-  transform: rotate(-30deg); }
+  transform: rotate(-30deg);
+  color: #eeeeee; }
 
 .container-hour--2 {
   transform: rotate(60deg); }
 
 .hour-2 {
-  transform: rotate(-60deg); }
+  transform: rotate(-60deg);
+  color: #eeeeee; }
 
 .container-hour--3 {
   transform: rotate(90deg); }
 
 .hour-3 {
-  transform: rotate(-90deg); }
+  transform: rotate(-90deg);
+  color: #eeeeee; }
 
 .container-hour--4 {
   transform: rotate(120deg); }
 
 .hour-4 {
-  transform: rotate(-120deg); }
+  transform: rotate(-120deg);
+  color: #eeeeee; }
 
 .container-hour--5 {
   transform: rotate(150deg); }
 
 .hour-5 {
-  transform: rotate(-150deg); }
+  transform: rotate(-150deg);
+  color: #eeeeee; }
 
 .container-hour--6 {
   transform: rotate(180deg); }
 
 .hour-6 {
-  transform: rotate(-180deg); }
+  transform: rotate(-180deg);
+  color: #eeeeee; }
 
 .container-hour--7 {
   transform: rotate(210deg); }
 
 .hour-7 {
-  transform: rotate(-210deg); }
+  transform: rotate(-210deg);
+  color: #eeeeee; }
 
 .container-hour--8 {
   transform: rotate(240deg); }
 
 .hour-8 {
-  transform: rotate(-240deg); }
+  transform: rotate(-240deg);
+  color: #eeeeee; }
 
 .container-hour--9 {
   transform: rotate(270deg); }
 
 .hour-9 {
-  transform: rotate(-270deg); }
+  transform: rotate(-270deg);
+  color: #eeeeee; }
 
 .container-hour--10 {
   transform: rotate(300deg); }
 
 .hour-10 {
-  transform: rotate(-300deg); }
+  transform: rotate(-300deg);
+  color: #eeeeee; }
 
 .container-hour--11 {
   transform: rotate(330deg); }
 
 .hour-11 {
-  transform: rotate(-330deg); }
+  transform: rotate(-330deg);
+  color: #eeeeee; }
 
 .container-hour--12 {
   transform: rotate(360deg); }
 
 .hour-12 {
-  transform: rotate(-360deg); }
-
-.minutes-0 {
-  transform: rotate(0deg); }
+  transform: rotate(-360deg);
+  color: #eeeeee; }
 
 .minutes-1 {
   transform: rotate(6deg); }
@@ -293,49 +327,66 @@ h1 {
 .minutes-60 {
   transform: rotate(360deg); }
 
-.hand {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 50px;
-  height: 50px;
-  background-color: black;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  border-radius: 50%; }
+.hand-base {
+  width: 25px;
+  height: 25px;
+  background-color: #fdcb9e;
+  border-radius: 50%;
+  z-index: 1000000; }
+  @media (min-width: 600px) {
+    .hand-base {
+      width: 40px;
+      height: 40px; } }
 
-.hand__hour {
+.hand-hour {
   position: absolute;
+  width: .4em;
+  height: 5em;
   bottom: 50%;
   left: 50%;
-  width: 12px;
-  height: 30%;
-  background-color: green;
-  z-index: 100;
-  transform: rotate(0deg);
-  transform-origin: bottom right;
-  transition: transform 1s; }
+  margin: 0 0 -1em -.2em;
+  background-color: #eeeeee;
+  z-index: 1000;
+  transform-origin: .2em 4em;
+  border-radius: 6px; }
+  @media (min-width: 600px) {
+    .hand-hour {
+      width: .8em;
+      height: 10em;
+      margin: 0 0 -1.5em -.4em;
+      transform-origin: .4em 8.5em; } }
+  .hand-hour::before {
+    content: ''; }
 
 .hand__minutes {
   position: absolute;
+  width: .3em;
+  height: 6em;
   bottom: 50%;
   left: 50%;
-  width: 8px;
-  height: 35%;
-  background-color: blue;
-  z-index: 1000;
-  transform: rotate(90deg);
-  transform-origin: bottom right;
-  transition: transform 1s; }
+  margin: 0 0 -1em -.15em;
+  transform-origin: .15em 5em;
+  background-color: #eeeeee;
+  z-index: 1000; }
+  @media (min-width: 600px) {
+    .hand__minutes {
+      width: .6em;
+      height: 12.5em;
+      margin: 0 0 -1.5em -.3em;
+      transform-origin: .3em 11em; } }
 
 .hand__seconds {
   position: absolute;
+  width: .2em;
+  height: 7em;
   bottom: 50%;
   left: 50%;
-  width: 4px;
-  height: 40%;
+  margin: 0 0 -1em -.1em;
+  transform-origin: .1em 6em;
   background-color: red;
-  z-index: 10000;
-  transform: rotate(180deg);
-  transform-origin: bottom right;
-  transition: transform 1s; }
+  z-index: 10000; }
+  @media (min-width: 600px) {
+    .hand__seconds {
+      height: 14em;
+      margin: 0 0 -2em -.1em;
+      transform-origin: .1em 12em; } }
