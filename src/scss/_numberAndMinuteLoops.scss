@@ -1,0 +1,17 @@
+/** Generator classes for numbers**/
+@for $i  from 1 through 12{
+    .container-hour--#{$i}{
+        transform: rotate(#{$i * 30}deg);
+    }
+    .hour-#{$i}{
+        transform: rotate(#{-($i * 30)}deg);        
+        color: $color1
+    }
+}
+
+/** Generator classes for each minute*/
+@for $i  from 1 through 60{
+    .minutes-#{$i}{
+        transform: rotate(#{$i * 6}deg);
+    }
+}

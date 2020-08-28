@@ -4,6 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     link(rel="stylesheet", href="css/styles.css")
+    link(rel="shortcut icon", href="#", type="image/x-icon")
     title Analog Watch
   body
     h1 Analog Watch
@@ -21,7 +22,7 @@ html(lang="en")
       while min <= 60
         -let minutes=`watch__minutes minutes-${min}`
         if min % 5 === 0
-          div(class=`${minutes} quarter`)
+          div(class=`${minutes} fifth`)
             div |
         else          
           div(class=minutes)
@@ -29,7 +30,7 @@ html(lang="en")
         -min++   
       <!-- hands -->
       #hand.hand-base
-      div#handHour.hand-hour
-      div#handMinutes.hand__minutes
-      div#handSeconds.hand__seconds
+      #handHour.hand-hour
+      #handMinutes.hand-minutes
+      #handSeconds.hand-seconds
       script(src="js/script.js")

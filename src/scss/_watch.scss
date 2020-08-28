@@ -48,29 +48,12 @@
     }
 }
 
-.quarter{
+.fifth{
     color: $color2;
     font-weight: bolder;
 }
 
-@for $i  from 1 through 12{
-    .container-hour--#{$i}{
-        transform: rotate(#{$i * 30}deg);
-    }
-    .hour-#{$i}{
-        transform: rotate(#{-($i * 30)}deg);        
-        color: $color1
-    }
-}
-
-@for $i  from 1 through 60{
-    .minutes-#{$i}{
-        transform: rotate(#{$i * 6}deg);
-    }
-}
-
-.hand-base{
-  
+.hand-base{  
    width: 25px;
    height: 25px;    
    background-color: $color2;
@@ -80,8 +63,7 @@
    @media (min-width: 600px){
     width: 40px;
     height: 40px;    
-    }
-   
+    }   
 }
 
 .hand-hour{
@@ -101,16 +83,9 @@
         height:10em;
         margin:0 0 -1.5em -.4em;
         transform-origin:.4em 8.5em; 
-    }
-    
-    
-    &::before{
-        content: ''; 
- 
-    }
-    
+    }    
 }
-.hand__minutes{
+.hand-minutes{
     position:absolute;
     width:.3em;
     height:6em;
@@ -118,8 +93,7 @@
     left:50%;
     margin:0 0 -1em -.15em;    
     transform-origin:.15em 5em;
-    background-color: $color1;
-    
+    background-color: $color1;    
     z-index: 1000;
 
     @media (min-width: 600px){
@@ -128,28 +102,21 @@
         margin:0 0 -1.5em -.3em;  
         transform-origin:.3em 11em;
     }
-    
-    
-   
 }
-.hand__seconds{
+.hand-seconds{
     position:absolute;
     width: .2em;
     height: 7em; 
     bottom:50%; 
     left:50%;
-    margin:0 0 -1em -.1em;  //-margin-buttom=dif entre 12-14  // margin-left la mitad del width   
-    transform-origin: .1em 6em; //1em es la mitad del with y 12 es entre el 88% y 85% del height
-   
-   
+    margin:0 0 -1em -.1em;    
+    transform-origin: .1em 6em; 
     background-color: red;    
     z-index: 10000; 
 
-    @media (min-width: 600px){
-       
+    @media (min-width: 600px){       
         height: 14em; 
-        margin:0 0 -2em -.1em; 
-        transform-origin: .1em 12em;
-    }
-          
+        margin:0 0 -2em -.1em; //-margin-buttom=dif entre 12-14  // margin-left la mitad del width 
+        transform-origin: .1em 12em; //1em es la mitad del width y 12 es entre el 88% y 85% del height
+    } 
 }
